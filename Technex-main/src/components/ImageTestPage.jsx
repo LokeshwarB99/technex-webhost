@@ -16,7 +16,7 @@ const ImageTestPage = () => {
 
     try {
       console.log('sending')
-      const response = await axios.post("http://localhost:5000/bs", formData, {
+      const response = await axios.post("https://tech-back-sgqm.onrender.com/bs", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -29,7 +29,7 @@ const ImageTestPage = () => {
 
   const handleFetchImage = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/bs/latest", {
+      const response = await axios.get("https://tech-back-sgqm.onrender.com/bs/latest", {
         responseType: "blob",
       });
       const imageBlob = response.data;

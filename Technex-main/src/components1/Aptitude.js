@@ -24,7 +24,7 @@ const Aptitude = () => {
   const navigate=useNavigate()
   useEffect(() => {
     // Fetch company list from the backend
-    axios.get("http://localhost:5000/questions/aptc")
+    axios.get("https://tech-back-sgqm.onrender.com/questions/aptc")
       .then(response => {
         setCompanyList(response.data);
       })
@@ -33,7 +33,7 @@ const Aptitude = () => {
       });
 
     // Fetch topic list from the backend
-    axios.get("http://localhost:5000/questions/aptt")
+    axios.get("https://tech-back-sgqm.onrender.com/questions/aptt")
       .then(response => {
         setTopicList(response.data);
       })
@@ -88,7 +88,7 @@ const Aptitude = () => {
         "duration":questionDuration
 
     }
-    axios.post("http://localhost:5000/test/schedule",nitem).then(res=>{
+    axios.post("https://tech-back-sgqm.onrender.com/test/schedule",nitem).then(res=>{
         if(res.data=="ok"){
             alert("test schedule")
             navigate("/")
@@ -109,7 +109,7 @@ const Aptitude = () => {
       "fill": parseInt(fillUpsCount)
     };
     try {
-      const response = await axios.post("http://localhost:5000/questions/aptm", ni);
+      const response = await axios.post("https://tech-back-sgqm.onrender.com/questions/aptm", ni);
       setQuestions({
         "tech":response.data.mcq,
         "apt":response.data.msq,

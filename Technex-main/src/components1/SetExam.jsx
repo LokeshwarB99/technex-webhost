@@ -26,17 +26,17 @@ const SetExam = () => {
   useEffect(() => {
     const fetchDatabase = () => {
       axios
-        .get("http://localhost:5000/get_aptitude_questions")
+        .get("https://tech-back-sgqm.onrender.com/get_aptitude_questions")
         .then((response) => setAptitudeQuestions(response.data));
 
       axios
-        .get("http://localhost:5000/get_technical_questions")
+        .get("https://tech-back-sgqm.onrender.com/get_technical_questions")
         .then((response) => {
           setTechnicalQuestions(response.data);
           setDisplayedQuestions(response.data);
         });
       axios
-        .get("http://localhost:5000/get_verbal_questions")
+        .get("https://tech-back-sgqm.onrender.com/get_verbal_questions")
         .then((response) => setVerbalQuestions(response.data));
     };
     fetchDatabase();

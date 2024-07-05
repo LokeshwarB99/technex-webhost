@@ -26,7 +26,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get(`http://localhost:5000/check/${id}/${userstate.email}`)
+//       .get(`https://tech-back-sgqm.onrender.com/check/${id}/${userstate.email}`)
 //       .then((response) => {
 //         if (response.data === "done") {
 //           navigate("/");
@@ -38,7 +38,7 @@
 //     const fetchQuestion = async () => {
 //       try {
 //         const questionData = await axios.get(
-//           `http://localhost:5000/get_question/${id}`
+//           `https://tech-back-sgqm.onrender.com/get_question/${id}`
 //         );
 //         const shuffledQuestions = shuffleArray(questionData.data.questions);
 //         setQuestion(shuffledQuestions);
@@ -156,7 +156,7 @@
 //       score: correctAnswersCount,
 //     };
 //     axios
-//       .post(`http://localhost:5000/addscore/${id}/${userstate.email}`, score)
+//       .post(`https://tech-back-sgqm.onrender.com/addscore/${id}/${userstate.email}`, score)
 //       .then((res) => {
 //         if (res.data === "done") {
 //           setIsSubmitted(true); // Mark as submitted
@@ -559,7 +559,7 @@ const Questionpage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/check/${id}/${userstate.email}`)
+      .get(`https://tech-back-sgqm.onrender.com/check/${id}/${userstate.email}`)
       .then((response) => {
         if (response.data === "done") {
           navigate("/");
@@ -571,7 +571,7 @@ const Questionpage = () => {
     const fetchQuestion = async () => {
       try {
         const questionData = await axios.get(
-          `http://localhost:5000/get_question/${id}`
+          `https://tech-back-sgqm.onrender.com/get_question/${id}`
         );
         const shuffledQuestions = shuffleArray(questionData.data.questions);
         setQuestion(shuffledQuestions);
@@ -689,7 +689,7 @@ const Questionpage = () => {
       score: correctAnswersCount,
     };
     axios
-      .post(`http://localhost:5000/addscore/${id}/${userstate.email}`, score)
+      .post(`https://tech-back-sgqm.onrender.com/addscore/${id}/${userstate.email}`, score)
       .then((res) => {
         if (res.data === "done") {
           setIsSubmitted(true); // Mark as submitted

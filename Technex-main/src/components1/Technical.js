@@ -24,7 +24,7 @@ const Technical = () => {
   const navigate=useNavigate()
   useEffect(() => {
     // Fetch company names from the backend
-    axios.get("http://localhost:5000/questions/company")
+    axios.get("https://tech-back-sgqm.onrender.com/questions/company")
       .then(response => {
         setCompanyNames(response.data);
         console.log(response.data);
@@ -34,7 +34,7 @@ const Technical = () => {
       });
   
     // Fetch programming languages from the backend
-    axios.get("http://localhost:5000/questions/lang")
+    axios.get("https://tech-back-sgqm.onrender.com/questions/lang")
       .then(response => {
         setProgrammingLanguages(response.data);
         console.log(response.data);
@@ -112,7 +112,7 @@ const Technical = () => {
         "duration":questionDuration
 
     }
-    axios.post("http://localhost:5000/test/schedule",nitem).then(res=>{
+    axios.post("https://tech-back-sgqm.onrender.com/test/schedule",nitem).then(res=>{
         if(res.data=="ok"){
             alert("test schedule")
             navigate("/")
@@ -135,7 +135,7 @@ const handleTestNameChange = (event) => {
       "fill": parseInt(fillUpsCount)
     };
     try {
-      const response = await axios.post("http://localhost:5000/questions/techm", ni);
+      const response = await axios.post("https://tech-back-sgqm.onrender.com/questions/techm", ni);
       setQuestions({
         "tech":response.data.mcq,
         "apt":response.data.msq,

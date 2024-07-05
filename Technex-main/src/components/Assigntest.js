@@ -18,7 +18,7 @@ const Assigntest = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/questions/company");
+        const response = await axios.get("https://tech-back-sgqm.onrender.com/questions/company");
         setCompany(response.data);
       } catch (error) {
         console.error("Error fetching company names:", error);
@@ -40,7 +40,7 @@ const Assigntest = () => {
   //    useEffect(()=>{
   //     const fetchData = async () => {
   //         try {
-  //             const response = await axios.get("http://localhost:5000/questions/company");
+  //             const response = await axios.get("https://tech-back-sgqm.onrender.com/questions/company");
   //             setCompany(response.data);
   //             console.log(response.data)
   //             console.log(company);

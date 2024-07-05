@@ -11,7 +11,7 @@ const Testscheduled = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/get_test/${userstate.email}`);
+        const response = await axios.get(`https://tech-back-sgqm.onrender.com/get_test/${userstate.email}`);
         if (Array.isArray(response.data)) {
           setTest(response.data);
         } else {

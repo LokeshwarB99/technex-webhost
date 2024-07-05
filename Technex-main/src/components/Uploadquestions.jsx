@@ -74,7 +74,7 @@ const Uploadquestions = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/${apiEndpoint}`,
+        `https://tech-back-sgqm.onrender.com/${apiEndpoint}`,
         formData,
         {
           headers: {

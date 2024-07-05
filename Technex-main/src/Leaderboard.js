@@ -28,7 +28,7 @@ const Leaderboard = () => {
 
   // const fetchData = () => {
   //   axios
-  //     .get("http://localhost:5000/leaderboard/")
+  //     .get("https://tech-back-sgqm.onrender.com/leaderboard/")
   //     .then((res) => {
   //       setLdata(res.data);
   //       setIsLoading(false);
@@ -41,7 +41,7 @@ const Leaderboard = () => {
 
   const fetchData = () => {
     axios
-      .get("http://localhost:5000/leaderboard/")
+      .get("https://tech-back-sgqm.onrender.com/leaderboard/")
       .then((res) => {
         const data = res.data;
         const sortedData = data.sort((a, b) => b.score - a.score);

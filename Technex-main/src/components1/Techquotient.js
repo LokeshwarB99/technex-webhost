@@ -61,7 +61,7 @@ const Techquotient = ({ company }) => {
             "duration":questionDuration
 
         }
-        axios.post("http://localhost:5000/test/schedule",nitem).then(res=>{
+        axios.post("https://tech-back-sgqm.onrender.com/test/schedule",nitem).then(res=>{
             if(res.data=="ok"){
                 alert("test schedule")
                 navigate("/")
@@ -84,7 +84,7 @@ const Techquotient = ({ company }) => {
     };
     console.log(companya)
     try {
-        const response = await axios.post("http://localhost:5000/questions/spec/tech", ni);
+        const response = await axios.post("https://tech-back-sgqm.onrender.com/questions/spec/tech", ni);
         setQuestions(response.data); // Update questions state with the fetched data
         setShowCheckout(true); // Set showCheckout to true to render Checkoutques component
     } catch (err) {
