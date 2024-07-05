@@ -573,7 +573,7 @@ const Questionpage = () => {
         const questionData = await axios.get(
           `https://tech-back-sgqm.onrender.com/get_question/${id}`
         );
-        const shuffledQuestions = shuffleArray(questionData.data.questions);
+        const shuffledQuestions = shuffleArray(questionData.data);
         setQuestion(shuffledQuestions);
         setTotalQuestion(shuffledQuestions.length);
         setSelectedAnswers(Array(shuffledQuestions.length).fill([]));
