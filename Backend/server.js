@@ -10,42 +10,42 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// const pool = mysql2.createPool(
-//   "mysql://root:JKUsPQzPRLEoURHkDoLvetuRPjKtaIVq@monorail.proxy.rlwy.net:23238/railway"
-// );
+const pool = mysql2.createPool(
+  "mysql://root:JKUsPQzPRLEoURHkDoLvetuRPjKtaIVq@monorail.proxy.rlwy.net:23238/railway"
+);
 
-// const promisePool = mysqlPromise.createPool({
-//   connectionLimit: 10,
-//   host: "monorail.proxy.rlwy.net",
+const promisePool = mysqlPromise.createPool({
+  connectionLimit: 10,
+  host: "monorail.proxy.rlwy.net",
+  user: "root",
+  password: "JKUsPQzPRLEoURHkDoLvetuRPjKtaIVq",
+  port: 23238,
+  database: "railway",
+  waitForConnections: true,
+  queueLimit: 0,
+});
+
+// const pool = mysql2.createPool({
+//   host: "localhost",
 //   user: "root",
-//   password: "JKUsPQzPRLEoURHkDoLvetuRPjKtaIVq",
-//   port: 23238,
-//   database: "railway",
+//   password: "1080", // Replace with your local MySQL password
+//   database: "technex", // Replace with your local database name
+//   port: 3306, // Default MySQL port
 //   waitForConnections: true,
+//   connectionLimit: 10,
 //   queueLimit: 0,
 // });
 
-const pool = mysql2.createPool({
-  host: "localhost",
-  user: "root",
-  password: "1080", // Replace with your local MySQL password
-  database: "technex", // Replace with your local database name
-  port: 3306, // Default MySQL port
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-});
-
-const promisePool = mysqlPromise.createPool({
-  host: "localhost",
-  user: "root",
-  password: "1080", // Replace with your local MySQL password
-  database: "technex", // Replace with your local database name
-  port: 3306, // Default MySQL port
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-});
+// const promisePool = mysqlPromise.createPool({
+//   host: "localhost",
+//   user: "root",
+//   password: "1080", // Replace with your local MySQL password
+//   database: "technex", // Replace with your local database name
+//   port: 3306, // Default MySQL port
+//   waitForConnections: true,
+//   connectionLimit: 10,
+//   queueLimit: 0,
+// });
 
 
 
